@@ -1,5 +1,5 @@
-function nicknameMap(persons) {
-  modified= persons.map(({name,age}) => (name+"-"+age));
+function nicknameMap(array) {
+  modified = array.map(({name,age}) => (name+"-"+age));
   return modified;
 }
 
