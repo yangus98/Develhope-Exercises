@@ -12,8 +12,7 @@ const persons = [
 ];
 
 const ageAverage = persons.reduce(
-  (accumulator, currentValue) => accumulator+currentValue.age, 0
-);
+  (accumulator, currentValue) => accumulator+currentValue.age, 0);
 
 console.log(Math.round(ageAverage/persons.length))
 
