@@ -1,6 +1,4 @@
-const adultFilter = (persons) => {
-  return persons.filter((item) => item.age >=18)
-}
+const adultFilter = (array) => {return array.filter((item) => item.age >=18)}
 
 const persons = [
   { name: 'Paul', age: 16 },
