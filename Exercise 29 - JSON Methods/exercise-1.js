@@ -13,3 +13,7 @@ const developer = new Person(1, 'Mario', 'Rossi', 25);
 var jsonDeveloper = JSON.stringify(developer);
 
 console.log(jsonDeveloper)
+
+var stringToCodeDeveloper = JSON.parse(jsonDeveloper);
+
+console.log(stringToCodeDeveloper)
