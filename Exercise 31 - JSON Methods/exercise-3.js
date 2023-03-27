@@ -11,9 +11,9 @@ const person1 = {
 };
 
 const person2 = { ...person1 };
-var jsonDeveloper = JSON.stringify(person1);
-var stringToCodeDeveloper = JSON.parse(jsonDeveloper);
+var jsonPerson = JSON.stringify(person1);
+var stringToCodePerson = JSON.parse(jsonDeveloper);
 person2.address.city = 'Milan';
 
-console.log(stringToCodeDeveloper);
+console.log(stringToCodePerson);
 console.log(person2);
