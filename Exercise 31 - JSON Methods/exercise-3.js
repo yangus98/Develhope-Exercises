@@ -10,10 +10,8 @@ const person1 = {
   }
 };
 
-const person2 = { ...person1 };
-var jsonPerson = JSON.stringify(person1);
-
-var NewPerson1 = JSON.parse(jsonPerson);
+let person2 = JSON.parse(JSON.stringify(person1))
 person2.address.city = 'Milan';
-console.log(NewPerson1);
+
+console.log(person1);
 console.log(person2);
