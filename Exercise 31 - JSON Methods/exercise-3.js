@@ -12,8 +12,8 @@ const person1 = {
 
 const person2 = { ...person1 };
 var jsonPerson = JSON.stringify(person1);
-var stringToCodePerson = JSON.parse(jsonPerson);
-person2.address.city = 'Milan';
 
-console.log(stringToCodePerson);
+var NewPerson1 = JSON.parse(jsonPerson);
+person2.address.city = 'Milan';
+console.log(NewPerson1);
 console.log(person2);
