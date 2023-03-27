@@ -12,7 +12,7 @@ const person1 = {
 
 const person2 = { ...person1 };
 var jsonPerson = JSON.stringify(person1);
-var stringToCodePerson = JSON.parse(jsonDeveloper);
+var stringToCodePerson = JSON.parse(jsonPerson);
 person2.address.city = 'Milan';
 
 console.log(stringToCodePerson);
