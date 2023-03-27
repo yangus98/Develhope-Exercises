@@ -1,4 +1,4 @@
-const person1 = {
+let person1 = {
   id: 1,
   firstName: 'Mario',
   lastName: 'Rossi',
@@ -11,7 +11,8 @@ const person1 = {
 };
 
 let person2 = JSON.parse(JSON.stringify(person1))
-person2.address.city = 'Milan';
+
+person2.address.city = "Milan"
 
 console.log(person1);
 console.log(person2);
