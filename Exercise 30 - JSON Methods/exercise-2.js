@@ -6,7 +6,7 @@ class Person {
     this.age = age;
   }
 
-  // il metodo è collegato, all'istanza newPerson e, attraverso this, alla classe Person
+  // il metodo è collegato, all'istanza newPerson e, attraverso this, ai campi di Person
 
   toJson() {
     return JSON.stringify(this);
