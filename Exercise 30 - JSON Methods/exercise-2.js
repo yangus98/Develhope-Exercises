@@ -15,8 +15,9 @@ class Person {
   // il metodo, poichè static, è legato alla classe e non ad un'istanza. Si può richiamare solo con Person quindi.
   // Static sui metodi non userà i campi di Person, ma altri valori a sè stanti.
 
-  static fromJson(value) {
-    return JSON.parse(value);
+  static fromJson(json) {
+    let {id, firstName, lastName, age} = JSON.parse(json)
+    return new Person(id, firstName, lastName, age)
   }
 
 }
