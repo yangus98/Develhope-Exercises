@@ -2,7 +2,7 @@ const isLogged = true;
 
 function randomNumber(isLogged){
     return new Promise((resolve,reject)=> {
-        if (isLogged = true) {
+        if (isLogged == true) {
             resolve (Math.random());
         } else {
             reject ("Reject!")
