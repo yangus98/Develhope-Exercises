@@ -24,5 +24,5 @@ function whoAreU(num){
 randomNumber(isLogged)
 .then (response =>{console.log(whoAreU(response))})
 .catch (e =>{console.log(e)})
-.finally (()=>{console.log()})
+.finally (()=>{console.log("Operation Complete!")})
 
