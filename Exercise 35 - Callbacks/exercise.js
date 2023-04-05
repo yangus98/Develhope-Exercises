@@ -1,9 +1,8 @@
-function repeatHello(sayHello){
-    sayHello = () => {console.log("Hello")}
-    return setInterval(sayHello, 1000);
+function repeatHello(callback) {
+    setInterval(callback, 1000);
 }
 
-repeatHello()
+repeatHello(() => console.log("Hello"));
 
 //The callback function must be an arrow function,
 //can you also explain why?
