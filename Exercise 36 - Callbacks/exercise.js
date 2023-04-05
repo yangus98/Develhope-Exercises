@@ -1,14 +1,9 @@
-var cnt = 0;
-var obj = setInterval(repeatHello,1000);
-
-function repeatHello(){
-    sayHello = () => {console.log("Hello")};
-    cnt++;
-    if(cnt===5){
-    clearInterval(obj);
-    }
-    return sayHello();
+function repeatHello(callback) {
+    let repeat = setInterval(callback, 1000);
+    setTimeout(() => clearInterval(repeat), 5000);
 }
+
+repeatHello(() => console.log("Hello"));
 
 // The callback function must be an arrow function, can you also explain why?
 
