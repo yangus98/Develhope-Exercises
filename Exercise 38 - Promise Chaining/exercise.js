@@ -22,5 +22,5 @@ function whoAreU(num){
 
 randomNumber(isLogged)
 .then (response =>{console.log(whoAreU(response))})
-.catch (e =>{console.log(e)})
+.catch (e =>{console.error(e)})
 

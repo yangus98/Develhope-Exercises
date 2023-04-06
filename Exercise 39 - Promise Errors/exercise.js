@@ -23,6 +23,6 @@ function whoAreU(num){
 
 randomNumber(isLogged)
 .then (response =>{console.log(whoAreU(response))})
-.catch (e =>{console.log(e)})
+.catch (e =>{console.error(e)})
 .finally (()=>{console.log("Operation Complete!")})
 
