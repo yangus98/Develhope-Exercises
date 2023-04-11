@@ -3,3 +3,17 @@ const user = {
   name: "John",
   age: 25,
 };
+
+function setData(item,name){
+  let userSerialized = JSON.stringify(item);
+  localStorage.setItem(name, userSerialized);
+  console.log(userSerialized);
+  }
+
+  function getData(value){
+  let userDeserialized = JSON.parse(localStorage.getItem(value));
+  console.log(userDeserialized);
+  }
+
+  setData(user, "user");
+  getData("user");
