@@ -7,7 +7,6 @@ data.forEach(item => {
   todoList.innerText = item.title;
   document.querySelector("ul").appendChild(todoList);                   
 });
-console.log(data);
 };
 
 Fetcher();
