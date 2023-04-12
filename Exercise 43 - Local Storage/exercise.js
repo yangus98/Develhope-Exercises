@@ -7,7 +7,6 @@ const user = {
 function setData(item,name){
   let userSerialized = JSON.stringify(item);
   localStorage.setItem(name, userSerialized);
-  console.log(userSerialized);
   }
 
   function getData(value){
