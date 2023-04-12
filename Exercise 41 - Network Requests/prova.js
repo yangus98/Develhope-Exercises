@@ -1,12 +1,21 @@
 async function fetcher(){
-  const data = await fetch("https://jsonplaceholder.typicode.com/todos/4");
-  const dataJson = await data.json();
-  h2 = document.querySelector("h2");
-  h2.innerText = dataJson.title;
-  
-  if (dataJson.completed == true) {
-    document.getElementById("checkbox").checked = true
-  }
-};
+  const result = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await result.json();
+    
+  data.forEach(item => {
+    const todoList = document.createElement("h2");
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
 
-fetcher();
+    if (item.completed == true) {
+      checkbox.checked = true;
+    }
+
+    todoList.innerText = item.title;
+    document.querySelector("#container").appendChild(todoList);
+    document.querySelector("#container").appendChild(checkbox);
+    
+  });
+  };
+  
+fetcher(); 
