@@ -1,7 +1,19 @@
-const user = {
+const John = {
   id: 1,
   name: "John",
   age: 25,
+};
+
+const Rosy = {
+  id: 2,
+  name: "Rosy",
+  age: 20,
+};
+
+const Giuseppe = {
+  id: 3,
+  name: "Giuseppe",
+  age: 24,
 };
 
 function setData(item,name){
@@ -14,5 +26,7 @@ function setData(item,name){
   console.log(userDeserialized);
   }
 
-  setData(user, "user");
-  getData("user");
+  setData(John, "primo");
+  setData(Rosy, "secondo");
+  setData(Giuseppe, "terzo");
+  getData("primo");
