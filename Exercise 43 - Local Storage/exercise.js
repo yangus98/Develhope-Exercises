@@ -9,10 +9,4 @@ function setData(item,name){
   localStorage.setItem(name, userSerialized);
   }
 
-  function getData(value){
-  let userDeserialized = JSON.parse(localStorage.getItem(value));
-  console.log(userDeserialized);
-  }
-
   setData(user, "user");
-  getData("user");
