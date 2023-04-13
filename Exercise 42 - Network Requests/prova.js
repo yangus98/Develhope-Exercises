@@ -5,10 +5,10 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
     const title = titolo.value;
-    const completed = completo.value;
+    const completed = completo.checked;
     obj = {
         title : title,
-        completed: completed,
+        checked: completed,
     };
      fetch("https://jsonplaceholder.typicode.com/posts", {
         method : "POST",
@@ -22,4 +22,3 @@ form.addEventListener("submit", (event) =>{
      .catch(err => console.error(err))
 
 })
-
