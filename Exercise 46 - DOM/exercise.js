@@ -9,3 +9,8 @@ const moreNameText = document.querySelectorAll("input[type=text].form-input")[0]
 const moreSurnameText = document.querySelectorAll("input[type=text].form-input")[1];
 
 console.log(moreNameText.value+ " " + moreSurnameText.value)
+
+//se si vogliono tutti i valori dati in input
+
+const ageText = document.querySelectorAll(".form-input")[2];
+console.log(nameText.value + " " + surnameText.value + " " + ageText.value);
