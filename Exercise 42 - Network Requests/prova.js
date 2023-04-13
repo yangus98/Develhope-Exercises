@@ -2,7 +2,7 @@ const titolo = document.querySelector("#todo-title");
 const completo = document.querySelector("#todo-completed");
 const form = document.querySelector("form");
 
-form.addEventListener("submit", (event) =>{
+form.addEventListener("submit", async (event) =>{
     event.preventDefault();
     const title = titolo.value;
     const completed = completo.checked;
@@ -10,15 +10,21 @@ form.addEventListener("submit", (event) =>{
         title : title,
         checked: completed,
     };
-     fetch("https://jsonplaceholder.typicode.com/posts", {
-        method : "POST",
-        headers : {
-            "content-Type": "application/json"
-        },
-        body: JSON.stringify(obj)
-     })
-     .then(response => response.json())
-     .then(data => console.log(data))
-     .catch(err => console.error(err))
+
+     try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method : "POST",
+            headers : {
+                "content-Type": "application/json"
+            },
+            body: JSON.stringify(obj)
+        })
+        const data = await response.json();
+        console.log(data);
+        
+    } catch (error) {
+        console.error(error);
+        
+    }
 
 })
