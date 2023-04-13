@@ -10,3 +10,9 @@ ${surnameLabel.innerText}${surnameText.value}
 ${ageLabel.innerText}${ageText.value}`
 );
 
+//oppure con previousElementSibling
+
+console.log(`${nameText.previousElementSibling.innerText}${nameText.value}
+${surnameText.previousElementSibling.innerText}${surnameText.value}
+${ageText.previousElementSibling.innerText}${ageText.value}`);
+
