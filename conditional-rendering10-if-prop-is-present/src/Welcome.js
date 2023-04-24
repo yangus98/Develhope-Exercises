@@ -4,21 +4,13 @@ Age.age = 18;
 
 export default class Welcome extends React.Component {
   render() {
-    if (Age.age && true){
       return (
         <p>
           Hello, {this.props.name}!
-          <Age age={Age.age} />
-        </p>
-      );
-    } else {
-      return (
-        <p>
-          Hello, {this.props.name}!
+          {Age.age && <Age age={Age.age} />}
         </p>
       );
     }
-  }
 }
 
 Welcome.defaultProps = {
