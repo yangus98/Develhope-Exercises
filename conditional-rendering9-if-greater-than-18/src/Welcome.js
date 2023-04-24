@@ -1,21 +1,20 @@
 import React from "react";
 import Age from "./Age";
-let chooseAge = 19;
+Age.age = 18;
 
 export default class Welcome extends React.Component {
   render() {
-    if (chooseAge > 18) {
+    if (Age.age > 18) {
       return (
         <p>
           Hello, {this.props.name}!
-          <Age age={chooseAge} />
+          <Age age={Age.age} />
         </p>
       );
     } else {
       return (
         <p>
           Hello, {this.props.name}!
-          <Age age=" " />
         </p>
       );
     }
@@ -23,5 +22,6 @@ export default class Welcome extends React.Component {
 }
 
 Welcome.defaultProps = {
-  name: "Default",
+  name: "Undefined name!",
+  age: "Undefined age!"
 };
