@@ -1,0 +1,1 @@
+It's possible to use Hello component multiple times but only between the same export brackets, because it's allowed only one export per module.
