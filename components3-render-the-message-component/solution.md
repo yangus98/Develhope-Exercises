@@ -1,0 +1,1 @@
+It's possible to render Message component and it will show its content, a paragraph that contains "What a beautiful day!"
