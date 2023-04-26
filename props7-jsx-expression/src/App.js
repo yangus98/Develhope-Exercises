@@ -1,8 +1,9 @@
 import Welcome from './Welcome';
+let chooseName = "Michele"
 
 function App() {
   return <div>
-          <Welcome name = "Michele"/>
+          <Welcome name = {chooseName}/>
         </div>
 }
 
