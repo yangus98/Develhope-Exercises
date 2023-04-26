@@ -1,13 +1,9 @@
-import React from "react";
-import Welcome from "./Welcome";
-let chooseName = "Mario";
+import Welcome from './Welcome';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Welcome name ={chooseName} age ={22}/>
-      </div>
-    );
-  }
+function App() {
+  return <div>
+          <Welcome name = "Michele"/>
+        </div>
 }
+
+export default App;
