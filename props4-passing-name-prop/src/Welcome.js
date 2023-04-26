@@ -4,7 +4,7 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <p>
-        Hello, {this.props.name}!
+        Welcome, {this.props.name}!
       </p>
     );
   }
