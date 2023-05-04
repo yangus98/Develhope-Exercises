@@ -15,13 +15,24 @@ export default function TodoList() {
     setItems([]);
   }
 
+  function removeTodo(){
+    const newArr = [...items];
+    newArr.splice(name,1);
+    setItems(newArr)
+}
+
   return (
       <div>
           <input onChange={(e) => setName(e.target.value)} ref={input}/>
           
           <button onClick={handleAdd}>add</button>
           <button onClick={removeAll}>remove all</button>
-          {items.map((item) => {return <li>{item}</li>})}
+          {items.map((item) => {return(
+          <>
+          <li>{item}</li>
+          <button onClick={removeTodo}>remove this</button>
+          </>
+          )})}
       </div>
   );
 }
