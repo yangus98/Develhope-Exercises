@@ -20,9 +20,9 @@ export default function TodoList(props) {
     setItems([]);
   };
 
-  function removeTodo() {
+  function removeTodo(index) {
     const newArr = [...items];
-    newArr.splice(name, 1);
+    newArr.splice(index, 1);
     setItems(newArr);
   }
 

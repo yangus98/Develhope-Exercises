@@ -3,11 +3,11 @@ import TodoList from "./TodoList"
 
 export default class App extends React.Component {
   renderArr = (arr, remove) => {
-    return arr.map((item) => {
+    return arr.map((item, index) => {
       return(
         <>
-            <li>{item}</li>
-          <button onClick={remove}>remove this</button>
+            <li index={index}>{item}</li>
+          <button onClick={() => remove(index)}>remove this</button>
         </>
       )
     })
@@ -16,7 +16,7 @@ export default class App extends React.Component {
   render(){
     return (
       <>
-      <TodoList renderArr = {this.renderArr}/>
+      <TodoList renderArr = {this.renderArr} />
       </>
     )
   }
