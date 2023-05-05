@@ -27,10 +27,10 @@ export default function TodoList() {
           
           <button onClick={handleAdd}>add</button>
           <button onClick={removeAll}>remove all</button>
-          {items.map((item) => {return(
+          {items.map((item,index) => {return(
           <>
-          <li>{item}</li>
-          <button onClick={removeTodo}>remove this</button>
+          <li index={index}>{item}</li>
+          <button onClick={() => removeTodo(index)}>remove this</button>
           </>
           )})}
       </div>
