@@ -8,7 +8,6 @@ export default function TodoList() {
   const [items, setItems] = useState(["Strawberry Cake", "Profiterols", "Chocolate"]);
   const handleAdd = () => {
       setItems([...items, name]);
-      setName('');
       input.current.value = ""
     };
 
