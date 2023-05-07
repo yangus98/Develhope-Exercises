@@ -8,7 +8,6 @@ export default function TodoList() {
   const [items, setItems] = useState(["Strawberry Cake", "Profiterols", "Chocolate"]);
   const handleAdd = () => {
       setItems([...items, name]);
-      setName('');
       input.current.value = ""
     };
   const removeAll = () => {
@@ -21,7 +20,7 @@ export default function TodoList() {
           
           <button onClick={handleAdd}>add</button>
           <button onClick={removeAll}>remove all</button>
-          {items.map((item) => {return <li>{item}</li>})}
+          {items.map((item, index) => {return <li index={index}>{item}</li>})}
       </div>
   );
 }
