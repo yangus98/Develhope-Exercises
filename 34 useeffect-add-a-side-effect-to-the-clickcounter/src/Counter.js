@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react"
 import OnCounterChange from './OnCounterChange';
  
-export default function App() {
+export default function Counter() {
     const [counter, setCounter] = useState(0);
     const increase = () => {
         setCounter(count => count + 1);
