@@ -1,21 +1,22 @@
 import React from 'react'
 import { useState } from "react"
-import OnCounterChange from './OnCounterChange';
+import { useEffect } from "react"
  
-export default function Counter() {
+export default function Clickcounter() {
     const [counter, setCounter] = useState(0);
     const increase = () => {
-        setCounter(count => count + 1);
+      setCounter(count => count + 1);
     };
 
-
+    useEffect(function onCounterChange(){console.log(`Il counter ora è  ${counter}` )}, [counter])
+      
     return (
         <div>
           <h1>{counter}</h1>
           <div>
-            <OnCounterChange counter={counter}/>
             <button onClick={increase}>One more!</button>
           </div>
         </div>
       );
 }
+
