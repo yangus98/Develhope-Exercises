@@ -17,7 +17,7 @@ export default function HandleForm() {
   };
 
   const autoComplete3 = (e) => {
-    setCheck({ pass: e.target.checked });
+    setCheck({ remember: e.target.checked });
   };
 
   return (
