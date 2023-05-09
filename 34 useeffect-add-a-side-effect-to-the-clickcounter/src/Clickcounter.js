@@ -3,7 +3,7 @@ import { useEffect } from "react"
  
 export default function Clickcounter(props) {
   
-  useEffect(() => props.change, [props.counter])
+  useEffect(() => props.change, [props.counter,props.change])
       
     return (
         <div>
