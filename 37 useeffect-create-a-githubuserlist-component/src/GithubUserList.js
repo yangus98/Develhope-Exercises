@@ -13,9 +13,7 @@ export default function GithubUserList (){
         <>
         <input type="text" onChange={(e) => setNames(e.target.value)}/>
         <button onClick={HandleAdd}>Register</button>
-        <button onClick={() => console.log(usernames)}>Test</button>
         
-
         <GithubUser username={names}/>
         <hr></hr>
         {usernames.map((e) =>{return <li>{e}</li>})}
