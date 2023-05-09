@@ -7,12 +7,11 @@ export default function App() {
       setCounter(count => count + 1);
     };
 
-    
-   
+    const onCounterChange = () => {console.log(`Il counter ora è  ${counter}` )}
 
     return(
         <>
-        <Clickcounter increase={increase} counter={counter} change={function onCounterChange(){console.log(`Il counter ora è  ${counter+1}` )}}/>
+        <Clickcounter increase={increase} counter={counter} change={onCounterChange({counter})}/>
         </>
     )
 }
