@@ -32,10 +32,7 @@ export default function CarForm ({defaultvalues}) {
 
     const onReset = (e) => {
         e.preventDefault()
-        formname.current.value = null
-        formmodel.current.value = null
-        formcolor.current.value = null
-        formyear.current.value = null
+        carDetails.current.reset()
         setName()
         setColor()
         setModel()
