@@ -4,28 +4,33 @@ import { useState } from "react"
 export default function CarForm ({defaultvalues}) {
 
     const carDetails = useRef("")
-    const formname = useRef("")
-    const formmodel = useRef("")
-    const formyear = useRef("")
-    const formcolor = useRef("")
+    const formName = useRef("")
+    const formModel = useRef("")
+    const formYear = useRef("")
+    const formColor = useRef("")
 
     const [name, setName] = useState("Lamborghini")
     const [model, setModel] = useState("Miura")
     const [year, setYear] = useState("Year")
     const [color, setColor] = useState("Rosso")
 
+    formName.value = name
+    formModel.value = model
+    formYear.value = year
+    formColor.value = color
+
     const onSubmit = (e) => {
         e.preventDefault()
-        console.log([name, model, year, color])
+        console.log([formName.value, formModel.value, formYear.value, formColor.value])
     }
 
     return(
         <>
         <form ref={carDetails}>
-          <input ref={formname} type="text" onChange={e => setName(e.target.value)} defaultValue={name}/>
-          <input ref={formmodel} type="text" onChange={e => setModel(e.target.value)} defaultValue={defaultvalues.model}/>
-          <input ref={formyear} type="text" onChange={e => setYear(e.target.value)} defaultValue={defaultvalues.year}/>
-          <input ref={formcolor} type="text" onChange={e => setColor(e.target.value)} defaultValue={defaultvalues.color}/>
+          <input ref={formName} type="text" onChange={e => setName(e.target.value)} defaultValue={defaultvalues.name}/>
+          <input ref={formModel} type="text" onChange={e => setModel(e.target.value)} defaultValue={defaultvalues.model}/>
+          <input ref={formYear} type="text" onChange={e => setYear(e.target.value)} defaultValue={defaultvalues.year}/>
+          <input ref={formColor} type="text" onChange={e => setColor(e.target.value)} defaultValue={defaultvalues.color}/>
           <button type="submit" onClick={onSubmit}>submit</button>
         </form>
       </>
