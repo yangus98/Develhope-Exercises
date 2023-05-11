@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import { useState } from "react"
+
 export default function CarForm ({defaultvalues}) {
 
     const carDetails = useRef("")
@@ -8,46 +9,23 @@ export default function CarForm ({defaultvalues}) {
     const formyear = useRef("")
     const formcolor = useRef("")
 
-    const [name, setName] = useState()
-    const [model, setModel] = useState()
-    const [year, setYear] = useState()
-    const [color, setColor] = useState()
+    const [name, setName] = useState("Lamborghini")
+    const [model, setModel] = useState("Miura")
+    const [year, setYear] = useState("Year")
+    const [color, setColor] = useState("Rosso")
 
     const onSubmit = (e) => {
         e.preventDefault()
         console.log([name, model, year, color])
     }
 
-    const onDefaultVal = (e) => {
-        e.preventDefault()
-        formname.current.value = defaultvalues.name
-        formmodel.current.value = defaultvalues.model
-        formcolor.current.value = defaultvalues.color
-        formyear.current.value = defaultvalues.year
-        setName(defaultvalues.name)
-        setColor(defaultvalues.color)
-        setModel(defaultvalues.model)
-        setYear(defaultvalues.year)
-    }
-
-    const onReset = (e) => {
-        e.preventDefault()
-        carDetails.current.reset()
-        setName()
-        setColor()
-        setModel()
-        setYear()
-    }
-
     return(
         <>
         <form ref={carDetails}>
-          <input ref={formname} type="text" onChange={e => setName(e.target.value)} />
-          <input ref={formmodel} type="text" onChange={e => setModel(e.target.value)} />
-          <input ref={formyear} type="text" onChange={e => setYear(e.target.value)} />
-          <input ref={formcolor} type="text" onChange={e => setColor(e.target.value)} />
-          <button onClick={onDefaultVal}>Set default values</button>
-          <button onClick={onReset}>Reset value</button>
+          <input ref={formname} type="text" onChange={e => setName(e.target.value)} defaultValue={name}/>
+          <input ref={formmodel} type="text" onChange={e => setModel(e.target.value)} defaultValue={defaultvalues.model}/>
+          <input ref={formyear} type="text" onChange={e => setYear(e.target.value)} defaultValue={defaultvalues.year}/>
+          <input ref={formcolor} type="text" onChange={e => setColor(e.target.value)} defaultValue={defaultvalues.color}/>
           <button type="submit" onClick={onSubmit}>submit</button>
         </form>
       </>
