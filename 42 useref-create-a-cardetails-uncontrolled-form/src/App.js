@@ -11,7 +11,7 @@ export default function App() {
 
 return (
       <>
-      <CarForm defaultvalues={initialData}/>
+      <CarForm initialData={initialData}/>
       </>
     );
 }

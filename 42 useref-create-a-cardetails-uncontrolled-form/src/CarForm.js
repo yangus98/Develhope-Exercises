@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { useState } from "react"
 
-export default function CarForm ({defaultvalues}) {
+export default function CarForm ({initialData}) {
 
     const carDetails = useRef("")
     const formName = useRef("")
@@ -27,10 +27,10 @@ export default function CarForm ({defaultvalues}) {
     return(
         <>
         <form ref={carDetails}>
-          <input ref={formName} type="text" onChange={e => setName(e.target.value)} defaultValue={defaultvalues.name}/>
-          <input ref={formModel} type="text" onChange={e => setModel(e.target.value)} defaultValue={defaultvalues.model}/>
-          <input ref={formYear} type="text" onChange={e => setYear(e.target.value)} defaultValue={defaultvalues.year}/>
-          <input ref={formColor} type="text" onChange={e => setColor(e.target.value)} defaultValue={defaultvalues.color}/>
+          <input ref={formName} type="text" onChange={e => setName(e.target.value)} defaultValue={initialData.name}/>
+          <input ref={formModel} type="text" onChange={e => setModel(e.target.value)} defaultValue={initialData.model}/>
+          <input ref={formYear} type="text" onChange={e => setYear(e.target.value)} defaultValue={initialData.year}/>
+          <input ref={formColor} type="text" onChange={e => setColor(e.target.value)} defaultValue={initialData.color}/>
           <button type="submit" onClick={onSubmit}>submit</button>
         </form>
       </>
