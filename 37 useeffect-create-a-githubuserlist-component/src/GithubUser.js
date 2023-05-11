@@ -32,14 +32,14 @@ export default function GithubUser(props) {
 
   return (
     <div>
-      <button onClick={handleGetUserData}>Load user data</button>
+      <button onClick={handleGetUserData}>Search user</button>
       <button onClick={props.handleAdd}>Register</button>
       {data && (
         <>
           <div>
             {loading && <h1>Loading...</h1>}
             {error && <h1>Error</h1>}
-            <h1>{data.name}</h1>
+            {data.name ? (<h1>{data.name}</h1>) : (<p><b>This account is not yet created!</b></p>)}
             <p>{data.login}</p>
           </div>
         </>
