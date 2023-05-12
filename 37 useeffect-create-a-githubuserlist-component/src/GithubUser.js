@@ -8,7 +8,6 @@ export default function GithubUser(props) {
   async function fetchGithubUser(username) {
     setLoading(true);
     setError(null);
-
     try {
       const response = await fetch(`https://api.github.com/users/${username}`);
       const json = await response.json();
@@ -39,7 +38,7 @@ export default function GithubUser(props) {
           <div>
             {loading && <h1>Loading...</h1>}
             {error && <h1>Error</h1>}
-            {data.name ? (<h1>{data.name}</h1>) : (<p><b>This account is not yet created!</b></p>)}
+            {data.name ? (<h1>{data.name}</h1>) : (<p><b>This account doesn't have login name!</b></p>)}
             <p>{data.login}</p>
           </div>
         </>
