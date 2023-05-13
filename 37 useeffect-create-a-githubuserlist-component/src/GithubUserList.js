@@ -1,20 +1,19 @@
-import {useState} from "react"
 import GithubUser from "./GithubUser"
+import {useState} from "react"
 
-export default function GithubUserList (){
-    const [names, setNames] = useState([])
-    const [usernames, setUsernames] = useState ([])
+export default function GithubUserList(){
 
-    const HandleAdd = () => {
-        setUsernames([...usernames, names])
-    }
+    const [name, setName] = useState('');
+    const [items, setItems] = useState([]);
+    const handleAdd = () => {
+        setItems([...items, name]);
+    };
 
     return(
-        <>
-        <input type="text" onChange={(e) => setNames(e.target.value)}/>
-        <GithubUser username={names} handleAdd={HandleAdd} userfinal={usernames} />
-        <hr></hr>
-        {usernames.map((e) =>{return <li>{e}</li>})}
-        </>
+        <div>
+        <input onChange={(e) => setName(e.target.value)}/>
+          <button onClick={handleAdd}>add</button>
+          {items.map((item, index) => {return <li index={index}><GithubUser username={item}/></li>})}
+        </div>
     )
 }
