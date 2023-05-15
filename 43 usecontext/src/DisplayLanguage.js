@@ -8,7 +8,7 @@ export default function DisplayLanguage () {
   const greetings = {
     it : {
       "HELLO": "Ben ritornato!",
-      "CAPTION": "La vità è bella!"
+      "CAPTION": "La vita è bella!"
     },
     en: {
       "HELLO": "Welcome back!",
