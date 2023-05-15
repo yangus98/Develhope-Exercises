@@ -10,9 +10,9 @@ export default function App() {
     }
 
     return(
-        <>
-        {showCounter && <Clickcounter showCounter={showCounter} />}
+        <div>
+        {showCounter ?(<p> <Clickcounter /></p>): false}
         <button onClick={handleToggleCounter}>Remove component</button>
-        </>
+        </div>
     )
 }

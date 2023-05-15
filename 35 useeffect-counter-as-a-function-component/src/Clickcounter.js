@@ -2,14 +2,15 @@ import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
  
-export default function App() {
+export default function Clickcounter() {
     const [counter, setCounter] = useState(0);
 
-    useEffect(() =>{
-      let interval = setInterval(function () {setCounter(counter + 1)},1000)
+    useEffect(() => {
+      let prova = setInterval(() => {setCounter((count) => count + 1)},3000)
 
       return () => {
-        clearInterval(interval, 1000)
+        clearInterval(prova)
+        console.log("ciao")
       }
     }, [counter])
 

@@ -1,41 +1,27 @@
 import { useRef } from "react"
-import { useState } from "react"
-
 
 export default function CarForm ({initialData}) {
 
-    const carDetails = useRef("")
-    const formName = useRef("")
-    const formModel = useRef("")
-    const formYear = useRef("")
-    const formColor = useRef("")
-
-    const [name, setName] = useState(initialData.name)
-    const [model, setModel] = useState(initialData.model)
-    const [year, setYear] = useState(initialData.year)
-    const [color, setColor] = useState(initialData.color)
-
-    formName.value = name
-    formModel.value = model
-    formYear.value = year
-    formColor.value = color
+    const carDetails = useRef(null)
+    const formName = useRef(null)
+    const formModel = useRef(null)
+    const formYear = useRef(null)
+    const formColor = useRef(null)
 
     const onSubmit = (e) => {
       e.preventDefault()
-      console.log([formName.value, formModel.value, formYear.value, formColor.value])
+      console.log([formName.current.value, formModel.current.value, formYear.current.value, formColor.current.value])
     }
 
-    const proveName = (e) => { 
-      setName(e.target.value)
-    }
+    
 
     return(
         <>
-        <form ref={carDetails}>
-          <input ref={formName} type="text" onChange={proveName} defaultValue={name} />
-          <input ref={formModel} type="text" onChange={e => setModel(e.target.value)} defaultValue={model}/>
-          <input ref={formYear} type="text" onChange={e => setYear(e.target.value)} defaultValue={year}/>
-          <input ref={formColor} type="text" onChange={e => setColor(e.target.value)} defaultValue={color}/>
+        <form ref={carDetails} onFocus={e => (e.target.value = "")}>
+          <input ref={formName} name="name" type="text" onChange={e => (e.target.value)} defaultValue={initialData.name}/>
+          <input ref={formModel} name="model" type="text" onChange={e => (e.target.value)} defaultValue={initialData.model}/>
+          <input ref={formYear} name="year" type="text" onChange={e => (e.target.value)} defaultValue={initialData.year}/>
+          <input ref={formColor} name="color" type="text" onChange={e => (e.target.value)} defaultValue={initialData.color}/>
           <button type="submit" onClick={onSubmit}>submit</button>
         </form>
       </>
