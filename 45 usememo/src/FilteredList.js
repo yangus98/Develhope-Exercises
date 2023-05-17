@@ -45,8 +45,7 @@ export default function FilteredList() {
         }
     ]
 
-    const adults = dataUsers.filter(el => el.age > 17)
-    const memoizeAdults = useMemo(() => adults , [adults]);
+    const memoizeAdults = useMemo(() => dataUsers.filter(el => el.age > 17) , [dataUsers]);
 
     return(
         <>
