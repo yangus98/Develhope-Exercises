@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react"
  
-export default function App() {
+export default function Clickcounter() {
     const [counter, setCounter] = useState(0);
     const increase = () => {
         setCounter(count => count + 1);
