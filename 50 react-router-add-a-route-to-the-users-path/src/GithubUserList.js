@@ -13,7 +13,7 @@ export default function GithubUserList(){
         <div>
         <input onChange={(e) => setName(e.target.value)}/>
           <button onClick={handleAdd}>add</button>
-          {items.map((item, index) => {return <li index={index}><Link to={item}>show user!</Link></li>})}
+          {items.map((item, index) => {return <li index={index}><Link to={item}>{item}</Link></li>})}
 
           <Outlet />
         </div>
