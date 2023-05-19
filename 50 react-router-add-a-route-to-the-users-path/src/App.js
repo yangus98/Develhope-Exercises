@@ -16,7 +16,7 @@ export function App(){
            </Route>
         </Routes>
 
-        <p><Link to="users/yangus98">Link to my repo...</Link></p>
+        <p><Link to="users/list/yangus98">Link to my repo...</Link></p>
         <p><Link to="/">Link to Homepage...</Link></p>
         <p><Link to="users/list">Link to the list...</Link></p>
         </>
