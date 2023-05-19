@@ -9,7 +9,6 @@ export function App(){
     return(
         <>
         <Routes>
-           
            <Route path="users" >
               <Route path="list" element={<GithubUserList />} >
                 <Route path=":username" element={<ShowGithubUser/>} />
