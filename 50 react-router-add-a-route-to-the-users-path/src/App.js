@@ -9,9 +9,11 @@ export function App(){
     return(
         <>
         <Routes>
+           
            <Route path="users" >
-              <Route path=":username" element={<ShowGithubUser/>} />
-              <Route path="list" element={<GithubUserList />} />
+              <Route path="list" element={<GithubUserList />} >
+                <Route path=":username" element={<ShowGithubUser/>} />
+              </Route>
            </Route>
         </Routes>
 
