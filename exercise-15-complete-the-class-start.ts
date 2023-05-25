@@ -36,7 +36,7 @@ class Currency {
         description += `has the code ${this.code} `;
         description += `and uses the symbol ${this.symbol}.`;
 
-        return console.log(description);
+        return description;
     }
 }
 
