@@ -4,7 +4,7 @@
 
 // Add a tuple type annotation for this tuple.
 
-type CountryWithPopulation = [string, number]
+type CountryWithPopulation = (string | number)[]
 
 const countryPopulation: CountryWithPopulation = ["China", 1_412_600_000];
 

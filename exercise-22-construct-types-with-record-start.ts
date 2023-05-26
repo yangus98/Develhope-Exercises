@@ -20,7 +20,9 @@ interface Currency {
     symbol: string;
 }
 
-const currencies: Record <string, Currency> = {
+type Currencies = Record<"france" | "china" | "colombia", Currency>
+
+const currencies: Currencies = {
     france: {
         name: "Euro",
         code: "EUR",
