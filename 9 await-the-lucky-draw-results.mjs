@@ -1,4 +1,4 @@
-async function checkPlayer(player){
+async function getResults(player){
   try{
     const letsPlay = await new Promise(function (resolve, reject) {
     if(player === "Joe" || player === "Caroline" || player === "Sabrina") {
@@ -26,4 +26,4 @@ console.error(e)
 }
 }
 
-checkPlayer("Caroline")
+getResults("Caroline")
