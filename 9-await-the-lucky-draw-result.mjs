@@ -13,7 +13,7 @@ async function getResults() {
       });
       return result;
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -26,7 +26,7 @@ async function getResults() {
       const result3 = await luckyDraw("Marco");
       console.log(result3);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
