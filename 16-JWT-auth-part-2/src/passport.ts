@@ -17,8 +17,8 @@ passport.use(
 
         try{
             return user ? done(null, user) : done(new Error("User not found."))
-        }catch(error){
-            done(error);
+        }catch(e){
+            done(e);
         }
     })
 );
