@@ -40,7 +40,7 @@ const signUp = async (req: Request, res: Response) => {
 
 const logOut = async (req: Request, res: Response) => {
     const user: any = req.user;
-    await db.none(`UPDATE users SET token=$2 WHERE id=$1`, [user?.id, null])
+    await db.none(`UPDATE users SET token=NULL WHERE id=$1`, [user.id])
     res.status(200).json({ msg: "Logout successful"})
 }
 
