@@ -16,8 +16,8 @@ const setupDB = async () => {
 
   CREATE TABLE users (
     id SERIAL NOT NULL PRIMARY KEY,
-    username TEXT NOT NULL,
-    password TEXT NOT NULL,
+    username VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL,
     token TEXT
   );
   `);
